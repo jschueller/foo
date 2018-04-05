@@ -3,9 +3,9 @@ dist: trusty
 sudo: required
 
 install:
-  - sudo apt-get update
-  - sudo apt-get -y install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra python-matplotlib pandoc
   - sudo rm -r /opt/python/*
+  - sudo apt-get update
+  - sudo apt-get -y install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra python-matplotlib pandoc python-pip
   - pip install sphinx numpydoc matplotlib nbsphinx==0.3.1 ipython==5.* --user --upgrade
 
 script:
