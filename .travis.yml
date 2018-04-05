@@ -3,8 +3,7 @@ dist: trusty
 sudo: required
 
 install:
-  - sudo rm -r /opt/python/*
-  - sudo apt-get -y install python-pip
+  - sudo rm -r /opt/python /opt/pyenv
   - which pip
   - sudo apt-get update
   - sudo apt-get -y install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra python-matplotlib pandoc
