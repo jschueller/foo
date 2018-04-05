@@ -9,8 +9,9 @@ install:
   - pip install sphinx numpydoc matplotlib nbsphinx==0.3.1 ipython==5.* --user --upgrade
 
 script:
-  - cd doc && make html
+  # nbsphinx 0.3.1:
+  - make html -C doc
+  # now with nbsphinx 0.3.2:
   - pip install nbsphinx --user --upgrade
-  - pwd
   - rm -r build
-  - cd doc && make html
+  - make html -C doc
