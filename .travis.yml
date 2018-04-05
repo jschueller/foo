@@ -3,8 +3,7 @@ dist: trusty
 sudo: required
 
 install:
-  - sudo rm -r /opt/python /opt/pyenv
-  - which pip
+  - sudo rm -r /opt/py*
   - sudo apt-get update
   - sudo apt-get -y install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra python-matplotlib pandoc
   - pip install sphinx numpydoc matplotlib nbsphinx==0.3.1 ipython==5.* --user --upgrade
