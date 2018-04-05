@@ -6,8 +6,11 @@ install:
   - sudo apt-get update
   - sudo apt-get -y install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra python-matplotlib
   - sudo rm -r /opt/python/*
-  - pip install sphinx numpydoc matplotlib nbsphinx --user --upgrade
+  - pip install sphinx numpydoc matplotlib nbsphinx==0.3.1 ipython==5.* --user --upgrade
 
 script:
   - cd doc && make html
-
+  - pip install nbsphinx --user --upgrade
+  - pwd
+  - rm -r build
+  - cd doc && make html
